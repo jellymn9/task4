@@ -1,5 +1,6 @@
 import {Request,Response} from "express";
 import { RegisterValidation } from "../validation/register.validation";
+//import {getManager} from "typeorm";
 
 
 export const Register = (req: Request, res: Response) => {
@@ -14,5 +15,9 @@ export const Register = (req: Request, res: Response) => {
             message: "Password did not match!"
         });
     }
+
+    //const repository = getManager()
+
+
     res.send(body);
 }
